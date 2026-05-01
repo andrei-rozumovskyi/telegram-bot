@@ -35,8 +35,7 @@ def subscribe(message):
     bot.send_message(
         message.chat.id,
         "👉 Подпишитесь на канал:
-        https://t.me/tg_obyavleniya_online
-    )
+        https://t.me/tg_obyavleniya_online")
 
 # --- ИНФОРМАЦИЯ ---
 @bot.message_handler(func=lambda m: m.text == "ℹ️ Информация")
