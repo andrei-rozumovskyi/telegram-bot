@@ -1,24 +1,21 @@
-import telebot
-import os
-
-from telebot.types import (
-    ReplyKeyboardMarkup,
-    KeyboardButton,
-    InlineKeyboardMarkup,
-    InlineKeyboardButton
-)
-
 TOKEN = os.getenv("TOKEN")
-ADMIN_ID = int(os.getenv("ADMIN_ID"))
 
-# 🔥 Username канала
-CHANNEL_USERNAME = "@obyavleniy_online"
+ADMIN_ID = os.getenv("ADMIN_ID")
+CHANNEL_ID = os.getenv("CHANNEL_ID")
 
-# 🔥 ID канала
-# пример: -1001234567890
-CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
+if not TOKEN:
+    raise Exception("TOKEN не найден!")
 
-bot = telebot.TeleBot(TOKEN)
+if not ADMIN_ID:
+    raise Exception("ADMIN_ID не найден!")
+
+if not CHANNEL_ID:
+    raise Exception("CHANNEL_ID не найден!")
+
+ADMIN_ID = int(ADMIN_ID)
+CHANNEL_ID = int(CHANNEL_ID)
+
+
 
 # =========================
 # КНОПКИ
